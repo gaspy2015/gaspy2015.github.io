@@ -149,13 +149,39 @@ section {
 }
 
 .hero-text h1 {
+    overflow: hidden;
+    border-right: .15em solid crimson;
+    white-space: nowrap;
+    letter-spacing: .15em;
     font-family: var(--body-font);
     font-size: var(--big-font-size);
     color: crimson;
-    text-shadow: #252525;
-    font-weight: 400;
+    /* text-shadow: #252525; */
+    font-weight: 200;
     margin-bottom: .5rem;
-    letter-spacing: 3px;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: crimson;
+    }
 }
 
 .hero-text h4 {
