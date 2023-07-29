@@ -496,3 +496,20 @@ h3 {
         grid-column-end: 4;
     }
 }
+
+@media (max-width: 500px) {
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .skills_container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .skills_content {
+        width: 100%;
+    }
+}
